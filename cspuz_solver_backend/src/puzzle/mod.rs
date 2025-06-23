@@ -152,7 +152,9 @@ puzzle_list!(puzz_link,
     (tontonbeya, ["tontonbeya"], "Tontonbeya", "とんとんべや"),
     (yajikazu, ["yajikazu"], "Yajisan-Kazusan", "やじさんかずさん"),
     (yajilin, ["yajilin", "yajirin"], "Yajilin", "ヤジリン"),
-    (yajilin_regions, ["yajilin-regions"], "Yajilin (Regions)", "ヘヤジリン"),
+    (yajilin_regions, ["yajilin-regions"], "Yajilin (Regions)", "ヘヤジリン"),  
+    (anymino, ["anymino"], "Anymino", "Anymino"),
+    (shugaku, ["shugaku"], "Shugaku", "修学旅行の夜"),
 );
 
 #[rustfmt::skip]
