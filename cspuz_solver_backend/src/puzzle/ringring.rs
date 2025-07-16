@@ -4,7 +4,7 @@ use cspuz_rs_puzzles::puzzles::ringring;
 
 pub fn solve(url: &str) -> Result<Board, &'static str> {
     let problem = ringring::deserialize_problem(url).ok_or("invalid url")?;
-    let is_line = ringring::solve_ringring(&problem).ok_or("no answer")?;
+    let (is_line, is_black) = ringring::solve_ringring(&problem).ok_or("no answer")?;
 
     let height = problem.len();
     let width = problem[0].len();
@@ -14,6 +14,18 @@ pub fn solve(url: &str) -> Result<Board, &'static str> {
         for x in 0..width {
             if problem[y][x] {
                 board.push(Item::cell(y, x, "black", ItemKind::Fill));
+            }
+        }
+    }
+    for y in 0..height {
+        for x in 0..width {
+            if let Some(b) = is_black[y][x] {
+                board.push(Item::cell(
+                    y,
+                    x,
+                    "green",
+                    if b { ItemKind::Block } else { ItemKind::Dot },
+                ));
             }
         }
     }

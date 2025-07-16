@@ -96,3 +96,7 @@ pub mod yajilin;
 pub mod yajilin_regions;
 pub mod anymino;
 pub mod shugaku;
+pub mod kurarin;
+pub mod waterwalk;
+pub mod easyasabc;
+pub mod isowatari;
